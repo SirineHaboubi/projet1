@@ -1,0 +1,26 @@
+<!-- <div>
+    <ul>
+        <li *ngFor="let p of produits">{{p}}</li>
+    </ul>
+</div> -->
+
+<h1 class="list"><i class="fa-solid fa-list"></i> Liste des produits</h1>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Numéro</th>
+        <th scope="col">Nom produit</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of produits; index as i">
+        <th scope="row"><i class="fa-solid fa-list-ol"></i> {{i+1}}</th>
+        <td>{{p}}</td>
+        <td>
+            <button class="btn btn-danger">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
